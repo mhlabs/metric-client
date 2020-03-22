@@ -1,0 +1,38 @@
+{
+  "name": "@mhlabs/metric-client",
+  "version": "1.0.0",
+  "description": "A package for logging metrics to the console.",
+  "main": "index.js",
+  "jest": {
+    "collectCoverage": false,
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ]
+  },
+  "scripts": {
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "prepublishOnly": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mhlabs/metric-client.git"
+  },
+  "author": "mhdev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mhlabs/metric-client/issues"
+  },
+  "homepage": "https://github.com/mhlabs/metric-client#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "*",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jest": "*",
+    "eslint-plugin-prettier": "^3.1.0",
+    "jest": "^25.1.0",
+    "prettier": "^1.18.2"
+  },
+  "dependencies": {}
+}
