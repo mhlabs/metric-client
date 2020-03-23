@@ -1,10 +1,14 @@
 const MetricClient = require('./metricClient');
 
-const logger = new MetricClient('virtual-test-stack');
+const metricClient = new MetricClient('virtual-test-stack', 'my.metrics');
 
 test('Increment', () => {
-  // const log = logger.info('You have been informed.', metaData);
-  // expect(log).toEqual(
-  //   '[INF] [{"Stack":"virtual-test-stack","entityId":"123"}]You have been informed.'
-  // );
+  const metric = metricClient.increment('product.search', 1, [
+    'identifier:the-one',
+    'team:my-team'
+  ]);
+
+  expect(metric).toEqual(
+    'my.metrics: virtual-test-stack count product.search 1 domain:virtual-test-stack identifier:the-one team:my-team'
+  );
 });
